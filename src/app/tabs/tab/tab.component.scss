@@ -1,0 +1,43 @@
+.tab{
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 2px solid white;
+  margin-bottom: 1px;
+  padding: 0 10px;
+
+  .text{
+    width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &.active{
+    border-bottom-color: #ee7175;
+  }
+
+  &:not(.active):hover{
+    cursor: pointer;
+    border-bottom-color: #d2d7d3;
+  }
+
+  &:hover{
+    .close-icon{
+      opacity: 1;
+    }
+  }
+
+  .close-icon{
+    z-index: 2;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 1em;
+    opacity: 0;
+    cursor: pointer;
+    color: #d2d7d3;
+
+    &:hover{
+      color: #57a1c6;
+    }
+  }
+}
